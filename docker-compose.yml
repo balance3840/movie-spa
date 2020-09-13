@@ -1,0 +1,16 @@
+version: '3'
+services:
+
+  webserver:
+    image: nginx:1.19.1-alpine
+    container_name: movie-spa
+    tty: true
+    volumes: 
+        - ./public:/usr/share/nginx/html
+    ports:
+      - "3003:80"
+    networks:
+      - movie-spa
+
+networks:
+  movie-spa:
