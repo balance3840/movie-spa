@@ -1,14 +1,14 @@
 const CONFIG = {
     headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
+        'Accept': '*/*',
+        'Access-Control-Allow-Origin':'*',
         'cache': 'no-cache'
     }
 }
 
-export const APIKEY = 'XXXXXXXXXXXXX'
+export const APIKEY = 'PUT API KEY HERE'
 
-const BASEURL = 'http://localhost:3000'
+const BASEURL = 'http://api.themoviedb.org/3'
 
 export const IMAGE_BASEURL = 'https://image.tmdb.org/t/p/w600_and_h600_bestv2/'
 

@@ -1,17 +1,17 @@
 import { get } from '../utils/api'
 
 export function getPopularMovies() {
-  return get('/results')
+  return get('/movie/popular')
 }
 
 export function getUpcomingMovies() {
-  return get('/upcoming')
+  return get('/movie/upcoming')
 }
 
 export function getTopRatedMovies() {
-  return get('/top_rated')
+  return get('/movie/top_rated')
 }
 
 export function getMovieDetail(id) {
-  return get(`/results/${id}`)
+  return get(`/movie/${id}`)
 }
