@@ -1,9 +1,13 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
+import { BrowserRouter } from 'react-router-dom'
+import Routes from './routes'
 
 function App() {
   return (
-      <h1>Hello from App!</h1>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
   )
 }
 
