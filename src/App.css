@@ -1,0 +1,100 @@
+body {
+    background: #ffebcd9c;
+}
+
+.p-30 {
+    padding: 30px; 
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.card {
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
+    background: #ffffff;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-inline {
+    display: inline !important;
+}
+
+.align-center {
+    align-items: center !important;
+}
+
+.additional-info-card .item p {
+    font-size: 22px;
+}
+
+.additional-info-card .item span {
+    font-weight: bold;
+}
+
+.movie-poster {
+    margin-right: 16px;
+    margin-bottom: -4px;
+}
+
+.movie-description {
+    margin-right: 16px;
+}
+
+.movie-description h1 {
+    font-size: 80px;
+}
+
+.movie-description p {
+    font-size: 22px;
+}
+
+ul {
+    background: #000000;
+    height: 18px;
+    padding: 20px;
+}
+
+ul li {
+    display: inline;
+    padding: 20px;
+    color: white;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+ul li.first {
+    margin-left: -20px;
+}
+
+ul li.active {
+    background: #4CAF50;
+}
+
+.movies-carousel button {
+    font-size: 25px;
+    background: #007bff;
+    color: #ffffff;
+    border: none;
+}
+
+.btn {
+    background: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+    background: #007bffbd;
+}
