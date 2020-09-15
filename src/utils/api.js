@@ -1,15 +1,7 @@
 import { APIKEY, BASEURL, IMAGE_BASEURL } from "../../env"
 
-const CONFIG = {
-    headers: {
-        'Accept': '*/*',
-        'Access-Control-Allow-Origin':'*',
-        'cache': 'no-cache'
-    }
-}
-
 export function get(endpoint) {
-    return fetch(`${BASEURL}${endpoint}?api_key=${APIKEY}`, {...CONFIG, method: 'GET'})
+    return fetch(`${BASEURL}${endpoint}?api_key=${APIKEY}`)
         .then(function (response) {
             return response.json()
         })

@@ -10,15 +10,15 @@ export default function HomeContainer() {
 
     useEffect(() => {
         getPopularMovies()
-            .then(movies => setPopularMovies(movies))
+            .then(movies => setPopularMovies(movies.results))
             .catch(error => console.log(error))
 
         getUpcomingMovies()
-            .then(movies => setUpcomingMovies(movies))
+            .then(movies => setUpcomingMovies(movies.results))
             .catch(error => console.log(error))
 
         getTopRatedMovies()
-            .then(movies => setTopRatedMovies(movies))
+            .then(movies => setTopRatedMovies(movies.results))
             .catch(error => console.log(error))
     }, [])
 
