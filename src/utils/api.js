@@ -1,3 +1,5 @@
+import { APIKEY, BASEURL, IMAGE_BASEURL } from "../../env"
+
 const CONFIG = {
     headers: {
         'Accept': '*/*',
@@ -5,12 +7,6 @@ const CONFIG = {
         'cache': 'no-cache'
     }
 }
-
-export const APIKEY = 'PUT API KEY HERE'
-
-const BASEURL = 'http://api.themoviedb.org/3'
-
-export const IMAGE_BASEURL = 'https://image.tmdb.org/t/p/w600_and_h600_bestv2/'
 
 export function get(endpoint) {
     return fetch(`${BASEURL}${endpoint}?api_key=${APIKEY}`, {...CONFIG, method: 'GET'})

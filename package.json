@@ -22,6 +22,8 @@
     "webpack-merge": "^5.1.4"
   },
   "dependencies": {
+    "copy-webpack-plugin": "^6.1.0",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hot-loader": "^4.12.21",
@@ -29,8 +31,11 @@
     "react-router-dom": "^5.2.0"
   },
   "scripts": {
+    "install": "cp env.example.js env.js",
     "start": "webpack-dev-server --config webpack.dev.config.js --port 3002",
-    "build": "webpack --config webpack.prod.config.js",
+    "build": "npm run sass && webpack --config webpack.prod.config.js",
+    "docker": "npm run build && docker-compose up -d",
+    "sass": "npx node-sass src/App.scss src/App.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

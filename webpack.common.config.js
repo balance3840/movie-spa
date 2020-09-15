@@ -1,5 +1,6 @@
 const path = require("path")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const config = {
   entry: ['@babel/polyfill', './src/index.js'],
@@ -29,6 +30,11 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html'
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: './src/App.css', to: 'App.css' },
+      ]
     })
   ]
 }
