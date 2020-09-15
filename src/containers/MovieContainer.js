@@ -14,8 +14,8 @@ export default function MovieContainer() {
       .catch((error) => console.log(error));
   }, []);
 
-  function renderError() {
-    return <h1>There is an Error!</h1>;
+  function renderLoading() {
+    return <h1>Loading...</h1>;
   }
 
   function renderContent() {
@@ -27,5 +27,5 @@ export default function MovieContainer() {
     );
   }
 
-  return movie ? renderContent() : renderError();
+  return movie ? renderContent() : renderLoading();
 }
